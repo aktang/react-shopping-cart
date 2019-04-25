@@ -41,13 +41,13 @@ class CartProduct extends Component {
         />
         <Thumb
           classes="shelf-item__thumb"
-          src={require(`../../../static/products/${product.sku}_2.jpg`)}
+          src={require(`../../../static/products/${product.sku}.png`)}
           alt={product.title}
         />
         <div className="shelf-item__details">
           <p className="title">{product.title}</p>
           <p className="desc">
-            {`${product.availableSizes[0]} | ${product.style}`} <br />
+            {`${product.availableSizes[0]} | ${product.description}`} <br />
             Quantity: {product.quantity}
           </p>
         </div>

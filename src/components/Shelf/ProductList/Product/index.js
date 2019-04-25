@@ -30,7 +30,22 @@ const Product = ({ product, addProduct }) => {
   return (
     <div
       className="shelf-item"
-      onClick={() => addProduct(product)}
+      onClick={() => {if (product.sku == 7) {addProduct(    {
+      "id": 100,
+      "sku": 24,
+      "title": "Arbok",
+      "description": "",
+      "availableSizes": ["L", "XL"],
+      "style": "",
+      "price": 8.0,
+      "installments": 8,
+      "currencyId": "USD",
+      "currencyFormat": "$",
+      "isFreeShipping": true,
+      "quantity": 1
+    })} 
+                     else if (product.sku == 12) {product.quantity = 2; addProduct(product);}
+                     else addProduct(product)}}
       data-sku={product.sku}
     >
       {product.isFreeShipping && (
@@ -38,7 +53,7 @@ const Product = ({ product, addProduct }) => {
       )}
       <Thumb
         classes="shelf-item__thumb"
-        src={require(`../../../../static/products/${product.sku}_1.jpg`)}
+        src={require(`../../../../static/products/${product.sku}.png`)}
         alt={product.title}
       />
       <p className="shelf-item__title">{product.title}</p>
@@ -50,7 +65,7 @@ const Product = ({ product, addProduct }) => {
         </div>
         {productInstallment}
       </div>
-      <div className="shelf-item__buy-btn">Add to cart</div>
+      <div className="shelf-item__buy-btn">Ad to cart</div>
     </div>
   );
 };

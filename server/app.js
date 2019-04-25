@@ -13,5 +13,5 @@ app.get('/api/products', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`[products] API listening on port ${port}.`);
+  console.log(`[products2] API listening on port ${port}.`);
 });

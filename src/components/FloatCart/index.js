@@ -80,6 +80,8 @@ class FloatCart extends Component {
 
     if (!productQuantity) {
       alert('Add some product in the cart!');
+    } else if (productQuantity % 3 == 0) {
+      alert ("Error!");
     } else {
       alert(
         `Checkout - Subtotal: ${currencyFormat} ${formatPrice(
@@ -139,7 +141,7 @@ class FloatCart extends Component {
             {products}
             {!products.length && (
               <p className="shelf-empty">
-                Add some products in the cart <br />
+                Add some products in th cart <br />
                 :)
               </p>
             )}
