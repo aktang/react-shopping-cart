@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-<div style={{textalign: "center", fontsize: "x-large"}} >Gotta Buy Them All!</div>
+<h2 style={{textAlign: "center"}} >Gotta Buy Them All!</h2>
         <GithubCorner />
         <main>
           <Filter />
